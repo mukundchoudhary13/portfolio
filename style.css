@@ -293,67 +293,110 @@ h2 {
 }
 
 /* Contact Section */
-#contact {
-    background: rgba(255, 255, 255, 0.1);
-    color: #e0e0e0;
-    padding: 40px 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+/* General styling for social media icons */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     position: relative;
-    overflow: hidden;
-    margin-top: 20px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-#contact::before {
-    content: '';
+  }
+  
+  .social-icon {
+    font-size: 2rem; /* Adjust size if needed */
+    color: #fff; /* Default color */
+    text-decoration: none;
+    position: relative; /* Required for tooltip positioning */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+    color: #00ffcc; /* Neon color on hover */
+  }
+  
+  .github {
+    color: #333; /* GitHub color to ensure visibility */
+  }
+  
+  .linkedin {
+    color: #0077b5; /* LinkedIn specific color */
+  }
+  
+  .twitter {
+    color: #1da1f2; /* Twitter specific color */
+  }
+  
+  .email {
+    color: #ff0000; /* Email specific color */
+  }
+  
+  .instagram {
+    color: #e4405f; /* Instagram specific color */
+  }
+  
+  .youtube {
+    color: #ff0000; /* YouTube specific color */
+  }
+  
+  .phone {
+    color: #4caf50; /* Phone specific color */
+  }
+  
+  /* Tooltip styles */
+  .tooltip {
+    visibility: hidden;
+    background-color: #333; /* Default color for non-specific tooltips */
+    color: #fff; /* Text color */
+    text-align: center;
+    border-radius: 5px;
+    padding: 3px 6px;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('path/to/your-background-image.jpg') no-repeat center center/cover;
-    opacity: 0.2;
-    z-index: -1;
-}
-
-.contact-content {
-    max-width: 800px;
-    margin: auto;
-}
-
-.contact-content h2 {
-    color: #0ff;
-    font-size: 2rem;
-    border-bottom: 2px solid #0ff;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.contact-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #e0e0e0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.contact-content i {
-    font-size: 1.5rem;
-    color: #0ff;
-    transition: color 0.3s;
-}
-
-.contact-content i:hover {
-    color: #ff0;
-}
-
-
-
+    bottom: 125%; /* Position above the icon */
+    left: 50%;
+    margin-left: -50px; /* Center tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    font-size: 0.75rem; /* Small font size */
+  }
+  
+  .github .tooltip {
+    background-color: #333; /* Dark color for GitHub tooltip */
+  }
+  
+  .linkedin .tooltip {
+    background-color: #0077b5; /* LinkedIn brand color */
+  }
+  
+  .twitter .tooltip {
+    background-color: #1da1f2; /* Twitter brand color */
+  }
+  
+  .gmail {
+    color: #db4437; /* Gmail brand color */
+  }
+  
+  .gmail .tooltip {
+    background-color: #db4437; /* Gmail brand color for tooltip */
+  }
+  
+  .instagram .tooltip {
+    background-color: #e4405f; /* Instagram brand color */
+  }
+  
+  .youtube .tooltip {
+    background-color: #ff0000; /* YouTube brand color */
+  }
+  
+  .phone .tooltip {
+    background-color: #4caf50; /* Phone color (optional, or match your preference) */
+  }
+  
+  .social-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
 /* Footer */
 footer {
     background: #222;
